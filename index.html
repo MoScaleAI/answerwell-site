@@ -2,227 +2,271 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Answerwell</title>
-<meta name="description" content="White-label GEO for US SEO and marketing agencies. I deliver AI search visibility work under your brand. No upfront cost, and you pay me only after your client pays you.">
-<meta name="color-scheme" content="light dark">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="White-label GEO for SEO agencies. I do the AI search work for your clients under your brand. No upfront cost: you pay me only after your client pays you.">
+<meta property="og:title" content="Answerwell">
+<meta property="og:description" content="White-label GEO for SEO agencies. You sell it, I do the work, you pay me only after your client pays you.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Answerwell">
-<meta property="og:title" content="Answerwell: white-label GEO for agencies">
-<meta property="og:description" content="I deliver AI search visibility work under your agency's brand. No upfront cost. You pay me only after your client pays you.">
 <meta property="og:url" content="https://getanswerwell.com/">
 <meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Answerwell",
-  "legalName": "Scale It Up Media Ltd",
-  "url": "https://getanswerwell.com/",
-  "email": "partners@getanswerwell.com",
-  "description": "White-label GEO (AI search visibility) for US SEO and marketing agencies.",
-  "identifier": { "@type": "PropertyValue", "propertyID": "UK Companies House number", "value": "15538327" },
-  "address": { "@type": "PostalAddress", "addressCountry": "GB" }
-}
+{"@context":"https://schema.org","@type":"Organization","name":"Answerwell","legalName":"Scale It Up Media Ltd","url":"https://getanswerwell.com/","email":"partners@getanswerwell.com","identifier":"15538327"}
 </script>
 <style>
+/* Layout: one centered column. Hero with inline icon tiles, then short blocks, one action everywhere. */
 :root{
-  --bg:#f6f6f3; --surface:#ffffff; --ink:#16191a; --muted:#565d5e; --line:#dcdedb;
-  --accent:#1d5c55; --accent-soft:#e3eeec; --on-accent:#ffffff;
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --measure:40rem;
+  --bg:#ffffff; --fg:#111111; --muted:#5f6368; --soft:#f3f3f2; --line:#e7e7e5;
+  --blue:#2563eb; --amber:#ea580c; --green:#16a34a;
+  --btn:#111111; --btn-fg:#ffffff;
+  --font:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#121514; --surface:#1a1e1d; --ink:#e9ecea; --muted:#a2aaa8; --line:#2c3331;
-    --accent:#7cc4b8; --accent-soft:#1d2d2a; --on-accent:#0f1413;
-  }
-}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0c0c0c; --fg:#f4f4f3; --muted:#a3a3a0; --soft:#1a1a19; --line:#2a2a28;
+  --blue:#4f86f7; --amber:#f97316; --green:#22c55e; --btn:#f4f4f3; --btn-fg:#0c0c0c; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#121514; --surface:#1a1e1d; --ink:#e9ecea; --muted:#a2aaa8; --line:#2c3331;
-  --accent:#7cc4b8; --accent-soft:#1d2d2a; --on-accent:#0f1413;
+  --bg:#0c0c0c; --fg:#f4f4f3; --muted:#a3a3a0; --soft:#1a1a19; --line:#2a2a28;
+  --blue:#4f86f7; --amber:#f97316; --green:#22c55e; --btn:#f4f4f3; --btn-fg:#0c0c0c; color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;background:var(--fg);color:var(--bg);padding:8px 12px;border-radius:8px;z-index:20}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px)}
+.nav{display:flex;align-items:center;gap:28px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:-0.02em;text-decoration:none}
+.nav nav{display:flex;gap:24px;font-size:16px;font-weight:500}
+.nav nav a{text-decoration:none;opacity:.85}
+.nav nav a:hover{opacity:1}
+.nav .spacer{flex:1}
+.pill{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font:inherit;font-size:16px;font-weight:600;text-decoration:none;cursor:pointer;border:0;transition:transform .15s ease,opacity .15s ease,background .15s ease}
+.pill:active{transform:scale(.97)}
+.pill.dark{background:var(--btn);color:var(--btn-fg)}
+.pill.dark:hover{opacity:.88}
+.pill.light{background:var(--soft);color:var(--fg)}
+.pill.light:hover{background:var(--line)}
+.pill.inv{background:var(--bg);color:var(--fg);align-self:flex-start}
+.pill.sm{min-height:40px;padding:0 16px;font-size:15px}
+
+.hero{text-align:center;padding:72px 0 64px}
+.hero h1{margin:0 auto;max-width:12.5em;font-size:clamp(42px,7.4vw,92px);line-height:1.04;letter-spacing:-0.045em;font-weight:700;text-wrap:balance}
+.tile{display:inline-grid;place-items:center;width:.84em;height:.84em;border-radius:.2em;vertical-align:-.1em;margin:0 .02em}
+.tile svg{width:56%;height:56%}
+.t1{background:var(--blue);color:#fff}
+.t2{background:linear-gradient(135deg,#1f1f1f 0%,#ea580c 100%);color:#fff}
+.t3{background:var(--soft);color:var(--fg);box-shadow:inset 0 0 0 1px var(--line)}
+.hero p.sub{margin:28px auto 0;max-width:33em;color:var(--muted);font-size:clamp(17px,2vw,21px);line-height:1.5}
+.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.trust{margin-top:22px;font-size:14px;color:var(--muted)}
+
+section{padding:80px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:14px;font-weight:600;color:var(--muted);letter-spacing:.02em;margin:0 0 10px}
+h2{margin:0 0 14px;font-size:clamp(30px,4.2vw,48px);line-height:1.08;letter-spacing:-0.035em;font-weight:700;text-wrap:balance;max-width:16em}
+.lead{color:var(--muted);max-width:38em;margin:0}
+
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}
+.card{background:var(--soft);border-radius:24px;padding:28px;min-width:0}
+.card .n{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:10px;background:var(--bg);font-weight:600;font-size:15px;box-shadow:inset 0 0 0 1px var(--line)}
+.card h3{margin:18px 0 8px;font-size:21px;letter-spacing:-0.02em;line-height:1.25}
+.card p{margin:0;color:var(--muted);font-size:16px}
+
+.price{display:grid;grid-template-columns:1.1fr 1fr;gap:16px;margin-top:40px}
+.big{background:var(--fg);color:var(--bg);border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.big .row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.big .amt{font-size:clamp(44px,6vw,64px);font-weight:700;letter-spacing:-0.04em;line-height:1;font-variant-numeric:tabular-nums}
+.big .amt.s{font-size:clamp(28px,3.4vw,36px)}
+.big .unit{font-size:17px;opacity:.7}
+.big p{margin:0;opacity:.8}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.list li{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start}
+.list svg{width:20px;height:20px;margin-top:3px;color:var(--green)}
+.side{background:var(--soft);border-radius:28px;padding:32px;min-width:0}
+.side h3{margin:0 0 16px;font-size:20px;letter-spacing:-0.02em}
+.side p.note{margin:18px 0 0;color:var(--muted);font-size:14px}
+
+.guar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}
+.g h3{margin:0 0 8px;font-size:20px;letter-spacing:-0.02em;line-height:1.25}
+.g p{margin:0;color:var(--muted);font-size:15.5px}
+.g .k{font-size:13.5px;margin-top:12px}
+.flat{margin:16px 0 0;padding:20px 24px;border-radius:18px;box-shadow:inset 0 0 0 1px var(--line);font-weight:500}
+
+.promise{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+.shield{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:var(--soft)}
+.shield svg{width:28px;height:28px}
+
+details{border-bottom:1px solid var(--line);padding:18px 0}
+details:first-of-type{margin-top:28px;border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:32px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:400;font-size:24px;color:var(--muted);transition:transform .2s ease}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:10px 0 0;color:var(--muted);max-width:44em}
+
+.final{text-align:center;padding:96px 0}
+.final h2{margin:0 auto 14px}
+.final .lead{margin:0 auto}
+.mail{margin-top:18px;font-size:15px;color:var(--muted)}
+.mail a{font-weight:600;color:var(--fg)}
+
+footer{border-top:1px solid var(--line);padding:28px 0 calc(28px + env(safe-area-inset-bottom,0px));font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .steps,.guar,.price{grid-template-columns:1fr}
+  .nav nav{display:none}
+  .hero{padding:48px 0 48px}
+  section{padding:56px 0}
+  .big,.side{padding:28px}
 }
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);overflow-wrap:break-word}
-a{color:var(--accent);text-underline-offset:.18em}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-.wrap{max-width:64rem;margin:0 auto;padding:0 16px}
-@media (min-width:720px){.wrap{padding:0 40px}}
-header.top{border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:4rem}
-.brand{display:flex;align-items:center;gap:.6rem;color:var(--ink);text-decoration:none;font:600 1.15rem/1 var(--serif);letter-spacing:.01em}
-.brand svg{width:26px;height:26px;flex:none}
-.top-cta{font-size:.9rem;font-weight:500}
-h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;margin:0;letter-spacing:-.01em}
-h1{font-size:clamp(2.2rem,6vw,3.6rem);max-width:18ch}
-h2{font-size:clamp(1.6rem,3.6vw,2.15rem);margin-bottom:1.1rem}
-h3{font-size:1.2rem;font-weight:600;margin-bottom:.35rem}
-p{margin:0 0 1rem;max-width:var(--measure)}
-.eyebrow{font:600 .78rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
-.hero{padding:4.5rem 0 3.5rem}
-.hero .lede{font-size:1.2rem;color:var(--muted);margin-top:1.4rem;max-width:36rem}
-.hero .who{margin-top:2rem;padding-left:1rem;border-left:3px solid var(--accent);color:var(--ink);max-width:36rem}
-section{padding:3.25rem 0;border-top:1px solid var(--line)}
-.split{display:grid;gap:1.5rem}
-@media (min-width:860px){.split{grid-template-columns:16rem 1fr;gap:3rem}.split>h2{margin:0}}
-.muted{color:var(--muted)}
-.price{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 1.5rem;max-width:var(--measure)}
-@media (min-width:560px){.price{grid-template-columns:1fr 1fr}}
-.price div{background:var(--surface);padding:1.2rem 1.3rem}
-.price .num{font:500 2.1rem/1 var(--serif);display:block;margin-bottom:.35rem}
-.price .lbl{font-size:.92rem;color:var(--muted)}
-ul.plain{list-style:none;padding:0;margin:0 0 1rem;max-width:var(--measure)}
-ul.plain li{padding:.7rem 0 .7rem 1.4rem;border-bottom:1px solid var(--line);position:relative}
-ul.plain li:last-child{border-bottom:0}
-ul.plain li::before{content:"";position:absolute;left:0;top:1.3rem;width:.55rem;height:2px;background:var(--accent)}
-.cards{display:grid;gap:1rem;max-width:var(--measure)}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.25rem 1.3rem}
-.card p:last-child{margin-bottom:0}
-.card .cond{font-size:.94rem;color:var(--muted)}
-.note{background:var(--accent-soft);border-radius:10px;padding:1.1rem 1.3rem;max-width:var(--measure)}
-.note p{margin:0}
-ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:1.25rem;max-width:var(--measure)}
-ol.steps li{counter-increment:s;display:grid;grid-template-columns:2.4rem 1fr;gap:.9rem;align-items:start}
-ol.steps li::before{content:counter(s);display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;border:1px solid var(--accent);color:var(--accent);font:500 1.1rem/1 var(--serif)}
-ol.steps p{margin:0}
-.contact{padding:4rem 0}
-.btn{display:inline-block;background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:600;padding:.85rem 1.3rem;border-radius:8px;margin-top:.5rem;max-width:100%}
-.btn:hover{filter:brightness(1.08)}
-footer{border-top:1px solid var(--line);padding:2rem 0 2.5rem;font-size:.88rem;color:var(--muted)}
-footer p{margin:0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="Answerwell home">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--accent)"/><rect x="7" y="9" width="18" height="3.2" rx="1.6" fill="var(--on-accent)"/><rect x="7" y="14.4" width="13" height="3.2" rx="1.6" fill="var(--on-accent)" opacity=".7"/><rect x="7" y="19.8" width="8" height="3.2" rx="1.6" fill="var(--on-accent)" opacity=".45"/></svg>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Answerwell home">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M9 11h14M9 16h10M9 21h6" stroke="var(--bg)" stroke-width="2.6" stroke-linecap="round"/></svg>
       Answerwell
     </a>
-    <a class="top-cta" href="mailto:partners@getanswerwell.com">partners@getanswerwell.com</a>
+    <nav aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#guarantees">Guarantees</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="pill dark sm" href="mailto:partners@getanswerwell.com?subject=Answerwell%20partner%20call">Book a call</a>
   </div>
 </header>
 
-<main id="top">
-  <div class="wrap">
-    <div class="hero">
-      <p class="eyebrow">White-label GEO for agencies</p>
-      <h1>Sell AI search visibility under your own brand.</h1>
-      <p class="lede">I'm Mo. I deliver GEO work for your clients under your agency's name, to help them get named when people ask AI for a recommendation. You pay me only after your client pays you.</p>
-      <p class="who">For owners of US SEO and marketing agencies who want to add GEO as a service line without hiring for it.</p>
+<main id="main">
+  <div class="wrap hero" id="top">
+    <h1>Sell <span class="tile t1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></span> AI search under <span class="tile t2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h11M4 18h7"/></svg></span> your own <span class="tile t3" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span> brand</h1>
+    <p class="sub">I do the GEO work for your clients, to help them get named when people ask AI for a recommendation. You set the price. You pay me only after your client pays you.</p>
+    <div class="ctas">
+      <a class="pill dark" href="mailto:partners@getanswerwell.com?subject=Answerwell%20partner%20call">Book a 20-minute call</a>
+      <a class="pill light" href="#how">How it works <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
+    <p class="trust">For US SEO and marketing agencies. No upfront cost.</p>
   </div>
 
-  <section aria-labelledby="model">
-    <div class="wrap split">
-      <h2 id="model">The partner model</h2>
-      <div>
-        <p>There's no upfront cost, no joining fee and no minimum number of clients. You set your own retail price and keep the difference.</p>
-        <div class="price">
-          <div><span class="num">$1,000</span><span class="lbl">setup per client, wholesale</span></div>
-          <div><span class="num">$750<span class="muted" style="font-size:1rem"> /mo</span></span><span class="lbl">per client, wholesale</span></div>
+  <section id="how">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>You keep the client. I do the work.</h2>
+      <p class="lead">Your clients are asking about AI search. You don't need to hire for it.</p>
+      <div class="steps">
+        <div class="card">
+          <span class="n">1</span>
+          <h3>We talk for 20 minutes</h3>
+          <p>I show you a scan of one of your clients across the AI search engines from OpenAI, Perplexity and Google, and how the work runs.</p>
         </div>
-        <p>Both are paid only after your client pays you.</p>
-        <h3>Before your first sale</h3>
-        <p>I help with up to 2 client pitches at no cost to you. For each one I do the scan and the proposal in your brand, and I can join the sales call as part of your team when you ask. After your first sale, I support up to 2 open pitches at a time.</p>
-        <h3>After the sale</h3>
-        <p>If you want, I run the monthly report, the monthly client call and the client updates as part of your team, under your brand, with you copied on everything. You keep the billing and the relationship. The rest is hands off for you.</p>
-        <p class="muted" style="font-size:.94rem">Setup covers WordPress, Webflow, Shopify, Squarespace and Wix. Other platforms get a written quote first. Each client runs for a 3-month minimum from kickoff, then month to month.</p>
+        <div class="card">
+          <span class="n">2</span>
+          <h3>I help you sell it</h3>
+          <p>Up to 2 client pitches at no cost to you. I do the scan and the proposal in your brand, and I can join the sales call as part of your team.</p>
+        </div>
+        <div class="card">
+          <span class="n">3</span>
+          <h3>I deliver, you stay hands off</h3>
+          <p>Fix plan in 7 days, then weekly scans, fixes and a monthly report in your brand. If you want, I run the monthly client call too, with you copied. You keep billing and the relationship.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="delivered">
-    <div class="wrap split">
-      <h2 id="delivered">What gets delivered</h2>
-      <div>
-        <ul class="plain">
-          <li><strong>Baseline scan.</strong> 10 to 15 agreed buyer questions, asked across the AI search engines from OpenAI, Perplexity and Google, via their APIs. For each question: whether your client was named, who was named instead, and the cited sources.</li>
-          <li><strong>Fix plan.</strong> A dated list where every item has one owner, an acceptance test and a target date.</li>
-          <li><strong>Schema and llms.txt</strong> deployed on your client's site, plus Google Business Profile and Bing cleanup.</li>
-          <li><strong>Content.</strong> One piece at setup, then 1 to 2 fixes or content pieces each month.</li>
-          <li><strong>Branded dashboard.</strong> Password protected, with your logo, showing the stored AI answers.</li>
-          <li><strong>Monthly report</strong> in your brand, with weekly scans behind it and a plain-English note on what changed and why, written so you can forward it as is.</li>
-        </ul>
-        <p class="muted">Your client never sees my name unless you ask for it.</p>
+  <section id="pricing">
+    <div class="wrap">
+      <p class="eyebrow">Pricing</p>
+      <h2>You only pay me after your client pays you.</h2>
+      <div class="price">
+        <div class="big">
+          <div class="row"><span class="amt">$750</span><span class="unit">/mo per client, wholesale</span></div>
+          <div class="row"><span class="amt s">+ $1,000</span><span class="unit">setup per client</span></div>
+          <p>You set your own price and keep the difference. At $1,750 a month you keep $1,000 per client.</p>
+          <a class="pill inv" href="mailto:partners@getanswerwell.com?subject=Answerwell%20partner%20call">Book a 20-minute call</a>
+        </div>
+        <div class="side">
+          <h3>What's included</h3>
+          <ul class="list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Baseline scan on 10 to 15 agreed buyer questions, with the stored answers</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Fix plan, schema and llms.txt, Google Business Profile and Bing cleanup</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Weekly scans and 1 to 2 fixes or content pieces each month</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Branded dashboard and a monthly report you can forward as is</span></li>
+          </ul>
+          <p class="note">No joining fee, no minimum number of clients. Setup covers WordPress, Webflow, Shopify, Squarespace and Wix. Each client runs 3 months minimum, then month to month.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="guarantees">
-    <div class="wrap split">
-      <h2 id="guarantees">Guarantees, with their conditions</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>You never pay me before your client pays you</h3>
-          <p>I start setup once you confirm your client's setup payment has cleared. Each month, you pay me within 7 days of collecting from your client. If your client doesn't pay for a month, you owe me nothing for it, and work pauses until payment resumes.</p>
+  <section id="guarantees">
+    <div class="wrap">
+      <p class="eyebrow">Guarantees</p>
+      <h2>Written into the agreement, with their conditions.</h2>
+      <div class="guar">
+        <div class="card g">
+          <h3>Paid after your client pays</h3>
+          <p>If your client doesn't pay you for a month, you owe me nothing for it.</p>
         </div>
-        <div class="card">
-          <h3>Branded baseline and fix plan by day 7, or month 1 is $0</h3>
-          <p>Day 0 is when the access checklist is complete and your client's setup payment has reached you.</p>
-          <p class="cond">Once per client. Delays from missing access or approvals are excluded only if I tell you in writing within 1 business day, naming what's missing.</p>
+        <div class="card g">
+          <h3>Fix plan by day 7, or month 1 is $0</h3>
+          <p>A branded baseline and fix plan within 7 days of kickoff.</p>
+          <p class="k">Day 0 is when the access checklist is done and your client's setup payment has reached you.</p>
         </div>
-        <div class="card">
+        <div class="card g">
           <h3>No movement by day 90, month 4 is $0</h3>
-          <p>If by day 90 the agreed questions show no movement beyond the normal range I measure in week one (at least 5 points, at most 10), and the fix plan items owned by you and your client were done by day 60, month 4 is $0. I still deliver month 4 as normal.</p>
-          <p class="cond">Once per client. The questions, engines and measurement method are fixed in writing at kickoff, and every stored answer is kept for you to inspect.</p>
+          <p>If the agreed questions show no movement beyond the normal range I measure in week one, month 4 is on me.</p>
+          <p class="k">Applies when the fix plan items owned by you and your client were done by day 60.</p>
         </div>
-        <div class="note"><p>Nobody can guarantee rankings in AI answers, and I don't.</p></div>
       </div>
+      <p class="flat">Nobody can guarantee rankings in AI answers, and I don't.</p>
     </div>
   </section>
 
-  <section aria-labelledby="channel">
-    <div class="wrap split">
-      <h2 id="channel">The channel promise</h2>
+  <section>
+    <div class="wrap promise">
+      <div class="shield" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.2-3 7.8-7 9.5-4-1.7-7-5.3-7-9.5V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
       <div>
-        <p>Answerwell sells only to agencies. I never sell to brands under this name.</p>
-        <p>I never approach your clients, under any name, while you're a partner and for 12 months after. I apply the same rule to any client of yours I've scanned, even if you never sign. That covers any client you name to me and any client shown on your website. I only contact a client of yours when you ask me to in writing, and then I act as part of your team. This is written into the partner agreement.</p>
+        <p class="eyebrow">The channel promise</p>
+        <h2>I never compete with you.</h2>
+        <p class="lead">Answerwell sells only to agencies. I never approach your clients, under any name, while you're a partner and for 12 months after. I apply the same rule to any client of yours I've scanned, even if you never sign.</p>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="how">
-    <div class="wrap split">
-      <h2 id="how">How it works</h2>
-      <ol class="steps">
-        <li><div><h3>A 20-minute call</h3><p>I show you how the work runs and what I'd look at for one of your clients.</p></div></li>
-        <li><div><h3>The partner agreement</h3><p>Fees, guarantees and the channel promise, in plain writing.</p></div></li>
-        <li><div><h3>Your first client pitch</h3><p>I prepare the scan and proposal in your brand, and join the call if you want me there.</p></div></li>
-        <li><div><h3>Kickoff</h3><p>Your client pays you, you send the access checklist, and day 0 starts.</p></div></li>
-      </ol>
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Questions</p>
+      <h2>Quick answers</h2>
+      <details><summary>What is GEO?</summary><p>Getting your clients named when someone asks AI for a recommendation, like "best roofer in Austin", not just ranked on Google.</p></details>
+      <details><summary>Will my clients see your name?</summary><p>No. Everything carries your brand. I only contact a client of yours when you ask me to in writing, and then I act as part of your team.</p></details>
+      <details><summary>We already offer GEO. Why use you?</summary><p>For capacity. I run the weekly scans, fixes and branded reports, so your team stays on strategy and sales.</p></details>
+      <details><summary>How many partners do you take?</summary><p>I do the work myself, so I take a small number of partners at a time. When I'm full, I keep a waitlist and tell you honestly when I can start.</p></details>
     </div>
   </section>
 
-  <section aria-labelledby="capacity">
-    <div class="wrap split">
-      <h2 id="capacity">Capacity</h2>
-      <div>
-        <p>I do the work myself, so I take on a small number of partners at a time. When I'm full, I keep a waitlist and tell you honestly when I can start.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" aria-labelledby="contact">
-    <div class="wrap split">
-      <h2 id="contact">Talk to me</h2>
-      <div>
-        <p>Email me and send a time that suits. I'll come back to you with a short call to see if it fits.</p>
-        <a class="btn" href="mailto:partners@getanswerwell.com?subject=Answerwell%20partner%20call">partners@getanswerwell.com</a>
-      </div>
-    </div>
-  </section>
+  <div class="wrap final">
+    <h2>Worth 20 minutes?</h2>
+    <p class="lead">Email me and send a time that suits. I'll bring a scan of one of your clients.</p>
+    <div class="ctas"><a class="pill dark" href="mailto:partners@getanswerwell.com?subject=Answerwell%20partner%20call">Book a 20-minute call</a></div>
+    <p class="mail">or email <a href="mailto:partners@getanswerwell.com">partners@getanswerwell.com</a></p>
+  </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>Answerwell is a trading name of Scale It Up Media Ltd, registered in England and Wales, company 15538327.</p>
+    <span>Answerwell is a trading name of Scale It Up Media Ltd, registered in England and Wales, company 15538327.</span>
+    <span>© 2026 Answerwell</span>
   </div>
 </footer>
 </body>
